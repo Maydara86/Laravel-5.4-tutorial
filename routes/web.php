@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $tasks = [
+        'Finish laravel 5.4',
+        'Learn Vuejs 2',
+        'Get a job'
+    ];
+
+    return view('welcome', compact('tasks'));
 });
 
 Route::get('about', function () {
