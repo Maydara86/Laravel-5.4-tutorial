@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome Page</title>
+    <title>All Tasks</title>
 </head>
 <body>
     @foreach($tasks as $task)
-    <li>{{ $task->body }}</li>
+        <a href="tasks/{{ $task->id }}"><li>{{$task->body}}</li></a>
     @endforeach
 </body>
 </html>
