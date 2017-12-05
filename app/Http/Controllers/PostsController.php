@@ -18,4 +18,28 @@ class PostsController extends Controller
     {
         return view('posts.show', compact('post'));
     }
+
+    public function create()
+    {
+        return view('posts.create');
+    }
+
+    public function store()
+    {
+        // $post = new Post;
+        // $post->title = request('title');
+        // $post->body = request('body');
+        // $post->save();
+        // return redirect('/');
+
+        // Post::create([
+        //     'title' => request('title'),
+        //     'body' => request('body')
+        // ]);
+        // return redirect('/');
+        
+        Post::create(request(['title', 'body']));
+        return redirect('/');
+
+    }
 }
