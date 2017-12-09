@@ -7,16 +7,27 @@
     <hr>
 
 <form method="POST" action="/posts">
+
 {{ csrf_field() }}
+
   <div class="form-group">
     <label for="exampleInputtitle">Title</label>
-    <input type="text" class="form-control" id="exampleInputtitle" placeholder="Title" name="title">
+    <input type="text" class="form-control" id="exampleInputtitle" placeholder="Title" name="title" >
   </div>
+
   <div class="form-group">
     <label for="exampleInputBody">Post</label>
-    <textarea class="form-control" id="exampleInputBody" rows="5" placeholder="Here you can type your post..." name="body"></textarea>
+    <textarea class="form-control" id="exampleInputBody" rows="5" placeholder="Here you can type your post..." name="body" ></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Publish</button>
+  
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Publish</button>
+  </div>
+
+  @if(count($errors))
+    @include('layouts.error')
+  @endif
+
 </form>
 
 @endsection

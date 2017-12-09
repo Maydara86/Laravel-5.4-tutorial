@@ -26,18 +26,14 @@ class PostsController extends Controller
 
     public function store()
     {
-        // $post = new Post;
-        // $post->title = request('title');
-        // $post->body = request('body');
-        // $post->save();
-        // return redirect('/');
-
-        // Post::create([
-        //     'title' => request('title'),
-        //     'body' => request('body')
-        // ]);
-        // return redirect('/');
+        // title and body are directly stored 
+        // because we let them be mass assigned in the Post model
         
+        $this->validate(request(), [
+            'title' => 'required|min:3',
+            'body' => 'required|max:1000'
+        ]);
+
         Post::create(request(['title', 'body']));
         return redirect('/');
 
