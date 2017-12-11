@@ -3,7 +3,9 @@
 @section('content')
 
     @foreach($posts as $post)
-        <p><a href="/posts/{{$post->id}}" class="text-primary">{{$post->title}}</a></p>
+
+        @include('posts.post')
+        
     @endforeach
 
 @endsection
