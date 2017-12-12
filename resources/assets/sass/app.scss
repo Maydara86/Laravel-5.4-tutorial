@@ -161,6 +161,41 @@
     color: #999;
   }
   
+  /*
+   * Button
+   */
+
+   .btn {
+    background: #d934c0;
+    background-image: -webkit-linear-gradient(top, #d934c0, #be70bf);
+    background-image: -moz-linear-gradient(top, #d934c0, #be70bf);
+    background-image: -ms-linear-gradient(top, #d934c0, #be70bf);
+    background-image: -o-linear-gradient(top, #d934c0, #be70bf);
+    background-image: linear-gradient(to bottom, #d934c0, #be70bf);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 4px 3px 2px #451345;
+    -webkit-box-shadow: 3px 3px 6px #8c408c;
+    -moz-box-shadow: 3px 3px 6px #8c408c;
+    box-shadow: 3px 3px 6px #8c408c;
+    font-family: Courier New;
+    color: #400422;
+    font-size: 24px;
+    padding: 10px 20px 10px 20px;
+    border: solid #9e0829 4px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #f200ff;
+    background-image: -webkit-linear-gradient(top, #f200ff, #440e47);
+    background-image: -moz-linear-gradient(top, #f200ff, #440e47);
+    background-image: -ms-linear-gradient(top, #f200ff, #440e47);
+    background-image: -o-linear-gradient(top, #f200ff, #440e47);
+    background-image: linear-gradient(to bottom, #f200ff, #440e47);
+    text-decoration: none;
+  }
   
   /*
    * Footer
