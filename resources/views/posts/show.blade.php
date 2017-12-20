@@ -47,8 +47,12 @@
                 </div>
                 
             </form>
-        
-        @include('layouts.error')
+
+        @if(count($errors))
+ 
+            @include('layouts.error')
+ 
+        @endif
 
         </div>
     
