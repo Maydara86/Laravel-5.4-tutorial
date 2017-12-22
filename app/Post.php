@@ -9,6 +9,11 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function addComment($body)
     {
         // Because we have a relation betwen the post and the comment through the comments() methode above,
