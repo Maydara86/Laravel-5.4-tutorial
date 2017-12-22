@@ -6,7 +6,7 @@
             <a class="nav-link" href="/post/create">Create New Post</a>
             <a class="nav-link" href="#">Press</a>
             <a class="nav-link" href="#">New hires</a>
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="/about">About</a>
           </nav>
         </div>
       </div>
