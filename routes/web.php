@@ -27,11 +27,16 @@ Route::get('/tasks', 'TasksController@index');
 
 Route::get('/tasks/{task}', 'TasksController@show');
 
-
 Route::get('about', function () {
+
     return view('about');
+
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/register', 'RegistrationController@show');
+
+Route::post('/connect', 'RegistrationController@store');
