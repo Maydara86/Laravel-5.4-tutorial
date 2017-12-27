@@ -39,4 +39,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/register', 'RegistrationController@show');
 
-Route::post('/connect', 'RegistrationController@store');
+Route::post('/register', 'RegistrationController@store');
