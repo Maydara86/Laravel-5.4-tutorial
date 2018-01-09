@@ -15,16 +15,15 @@ class RegistrationController extends Controller
     
     public function store()
     {
-        // $this->validate(request(), [
+        $this->validate(request(), [
             
-        //     'name' => 'required',
+            'name' => 'required',
 
-        //     'email' => 'required|email',
+            'email' => 'required|email',
 
-        //     'password' => 'required|confirmation'
+            'password' => 'required|confirmed'
 
-        // ]);
-        dd('zab');
+        ]);
 
         $user = User::create(
             
@@ -34,7 +33,7 @@ class RegistrationController extends Controller
 
         auth()->login($user);
 
-        return redirect()->home();
+        return redirect('/');
 
     }
 }

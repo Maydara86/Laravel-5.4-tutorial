@@ -20,4 +20,9 @@ class Post extends Model
         // we can use comments()-create() and the post_id will be added automaticly  
         $this->comments()->create(compact('body'));
     }
+
+    public function store ()
+    {
+        //store a post when the user is loged in using the save method from Post model
+    }
 }

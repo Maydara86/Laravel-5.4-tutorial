@@ -7,6 +7,11 @@
             <a class="nav-link" href="#">Press</a>
             <a class="nav-link" href="#">New hires</a>
             <a class="nav-link" href="/about">About</a>
+            
+            @if(auth()->check())
+              <a class="nav-link ml-auto" href="#">{{ Auth::user()->name }}</a>
+            @endif
+          
           </nav>
         </div>
       </div>

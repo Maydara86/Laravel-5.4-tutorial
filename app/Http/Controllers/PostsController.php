@@ -28,7 +28,6 @@ class PostsController extends Controller
     {
         // title and body are directly stored 
         // because we let them be mass assigned in the Post model
-        
         $this->validate(request(), [
             'title' => 'required|min:3',
             'body' => 'required|max:1000'
