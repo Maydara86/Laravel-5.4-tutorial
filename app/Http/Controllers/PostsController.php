@@ -7,6 +7,7 @@ use App\Post;
 
 class PostsController extends Controller
 {
+    
     public function index()
     {
         $posts = Post::latest()->get();
@@ -14,15 +15,21 @@ class PostsController extends Controller
         return view('posts.index', compact('posts'));
     }
 
+
+
     public function show(Post $post)
     {
         return view('posts.show', compact('post'));
     }
 
+
+
     public function create()
     {
         return view('posts.create');
     }
+
+
 
     public function store()
     {
@@ -33,8 +40,9 @@ class PostsController extends Controller
             'body' => 'required|max:1000'
         ]);
 
-        Post::create(request(['title', 'body']));
-        return redirect('/');
+        auth()->user()->publish_a_Post(new Post(request(['title', 'body'])));
+
+        return redirect()->home();
 
     }
 }

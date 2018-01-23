@@ -33,9 +33,7 @@ Route::get('about', function () {
 
 });
 
-// Auth::routes();
-
-//Route::get('/home', 'HomeController@index');
+// Authentication Routes
 
 Route::get('/register', 'RegistrationController@show');
 

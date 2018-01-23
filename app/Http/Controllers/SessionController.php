@@ -11,8 +11,10 @@ class SessionController extends Controller
 
     public function __construct()
     {
-        $this->middleware('guest', ['exept' => 'destroy']);
+        $this->middleware('guest', ['except' => 'destroy']);
     }
+
+
     
     public function create()
     {
@@ -23,16 +25,13 @@ class SessionController extends Controller
 
     public function store()
     {
-        // $email = request('email');
-        // $password = bcrypt(request('password'));
         if(! Auth::attempt(['email' => request('email'), 'password' => request('password')])) {
               
-            return back();
+            return back()->withErrors(['message' => 'Please check your credentials']);
             
             }
         
-        return redirect()->home();
-        
+        return redirect()->home();   
     }
 
 
@@ -41,6 +40,6 @@ class SessionController extends Controller
     {
         Auth::logout();
 
-        return redirect('/login');
+        return redirect()->home();
     }
 }

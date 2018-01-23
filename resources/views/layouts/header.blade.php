@@ -8,8 +8,18 @@
             <a class="nav-link" href="#">New hires</a>
             <a class="nav-link" href="/about">About</a>
             
+            @if(!auth()->check())
+            <a href="/login" class="nav-link ml-auto">Login</a>
+            <a href="/register" class="nav-link ml">Register</a>
+            @endif
+
             @if(auth()->check())
-              <a class="nav-link ml-auto" href="#">{{ Auth::user()->name }}</a>
+              <a class="nav-link dropdown-toggle ml-auto" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ ucfirst(Auth::user()->name) }}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/logout">Logout</a>
+              </div>
             @endif
           
           </nav>

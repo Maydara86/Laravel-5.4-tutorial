@@ -9,10 +9,14 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+
+
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
+
 
     public function addComment($body)
     {
@@ -21,8 +25,11 @@ class Post extends Model
         $this->comments()->create(compact('body'));
     }
 
-    public function store ()
+
+
+    public function store (Post $post)
     {
         //store a post when the user is loged in using the save method from Post model
+        User::posts()->save($post);
     }
 }

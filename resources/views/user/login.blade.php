@@ -26,7 +26,7 @@
 
         <div class="form-group">
             
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn btn-success">Login</button>
           
         </div>
 
