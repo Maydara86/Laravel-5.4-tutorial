@@ -10,8 +10,6 @@
         {{$post->body}}
     </div>
 
-    <hr>
-
     <div class="comments">
         <ul class="list-group">
 
@@ -43,7 +41,7 @@
                 </div>
             
                 <div class="form-group">
-                    <button type="submit" class="btn">Lick Me</button>
+                    <button type="submit" class="btn btn-primary">Comment</button>
                 </div>
                 
             </form>
